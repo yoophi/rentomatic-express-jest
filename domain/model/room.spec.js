@@ -45,3 +45,17 @@ test("room should be exported to Object", () => {
   room = Room.factory(roomObj);
   expect(room.toObject()).toEqual(roomObj);
 });
+
+test("room should be comparable", () => {
+  roomObj = {
+    code: uuid(),
+    size: 200,
+    price: 10,
+    longitude: -0.09998975,
+    latitude: 51.75436293,
+  };
+
+  room1 = Room.factory(roomObj);
+  room2 = Room.factory(roomObj);
+  expect(room1).toEqual(room2);
+});
