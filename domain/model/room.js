@@ -6,5 +6,15 @@ class Room {
     this.longitude = longitude;
     this.latitude = latitude;
   }
+
+  static factory({ code, size, price, longitude, latitude }) {
+    return new Room({
+      code,
+      size,
+      price,
+      longitude,
+      latitude,
+    });
+  }
 }
 module.exports = Room;
