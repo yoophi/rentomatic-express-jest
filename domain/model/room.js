@@ -16,5 +16,15 @@ class Room {
       latitude,
     });
   }
+
+  toObject() {
+    return {
+      code: this.code,
+      size: this.size,
+      price: this.price,
+      longitude: this.longitude,
+      latitude: this.latitude,
+    };
+  }
 }
 module.exports = Room;

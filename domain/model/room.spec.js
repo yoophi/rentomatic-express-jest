@@ -32,3 +32,16 @@ test("room should be initialized by factory", () => {
   expect(room.longitude).toBe(-0.09998975);
   expect(room.latitude).toBe(51.75436293);
 });
+
+test("room should be exported to Object", () => {
+  roomObj = {
+    code: uuid(),
+    size: 200,
+    price: 10,
+    longitude: -0.09998975,
+    latitude: 51.75436293,
+  };
+
+  room = Room.factory(roomObj);
+  expect(room.toObject()).toEqual(roomObj);
+});
